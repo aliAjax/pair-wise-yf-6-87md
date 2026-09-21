@@ -56,7 +56,7 @@ h1 {
 .stats {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
 }
 
 .stat,
@@ -80,6 +80,88 @@ h1 {
 .stat strong {
   display: block;
   font-size: 1.65rem;
+}
+
+.stat strong.danger {
+  color: #a03d2d;
+}
+
+.budget-bar {
+  background: #e4e8df;
+  border-radius: 999px;
+  height: 10px;
+  margin: 0 auto 16px;
+  max-width: 1240px;
+  overflow: hidden;
+}
+
+.budget-bar span {
+  background: #526d4e;
+  display: block;
+  height: 100%;
+  transition: width 0.2s ease;
+}
+
+.notice {
+  border-radius: 8px;
+  font-weight: 800;
+  margin: 0 auto 16px;
+  max-width: 1240px;
+  padding: 12px 14px;
+}
+
+.notice.ok {
+  background: #d8ead6;
+  color: #376336;
+}
+
+.notice.error {
+  background: #f2d4cb;
+  color: #813d2a;
+}
+
+.board {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto 18px;
+  max-width: 1240px;
+}
+
+.worker {
+  background: #ffffff;
+  border: 1px solid #dde1d9;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.worker h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.worker .idle {
+  color: #828a80;
+  margin: 0;
+}
+
+.job {
+  background: #eef1eb;
+  border-radius: 6px;
+  display: grid;
+  gap: 2px;
+  padding: 8px 10px;
+}
+
+.job strong {
+  font-size: 0.82rem;
+}
+
+.job span {
+  color: #596257;
+  font-size: 0.84rem;
 }
 
 .layout {
@@ -255,6 +337,11 @@ textarea {
   color: #315674;
 }
 
+.status.confirm {
+  background: #f4deb4;
+  color: #694c21;
+}
+
 .status.done {
   background: #d8ead6;
   color: #376336;
@@ -264,6 +351,39 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.dispatch-form,
+.complete-form {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+}
+
+.dispatch-form {
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+}
+
+.complete-form {
+  grid-template-columns: 160px auto auto;
+}
+
+.dispatch-form select,
+.dispatch-form input,
+.complete-form input {
+  min-height: 38px;
+}
+
+.dispatch-form .primary,
+.complete-form .primary,
+.complete-form .ghost {
+  min-height: 38px;
+  white-space: nowrap;
+}
+
+.chip.warn {
+  background: #f4deb4;
+  color: #694c21;
 }
 
 .empty {
@@ -279,6 +399,15 @@ textarea {
   .header,
   .layout {
     display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  .dispatch-form,
+  .complete-form {
     grid-template-columns: 1fr;
   }
 }

@@ -59,6 +59,77 @@ h1 {
   grid-template-columns: repeat(3, minmax(110px, 1fr));
 }
 
+.budget {
+  margin: 0 auto 20px;
+  max-width: 1240px;
+}
+
+.budget-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  justify-content: space-between;
+}
+
+.budget h2 {
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.budget-numbers {
+  color: #687166;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.86rem;
+  gap: 6px 16px;
+}
+
+.budget-numbers strong {
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.spent-text {
+  color: #3d6937;
+}
+
+.occupied-text {
+  color: #9a6a1f;
+}
+
+.over {
+  color: #a33b2a;
+}
+
+.bar {
+  background: #e9eee6;
+  border-radius: 999px;
+  display: flex;
+  height: 12px;
+  margin: 12px 0 8px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+}
+
+.bar-spent {
+  background: #526d4e;
+}
+
+.bar-occupied {
+  background: #d7a24d;
+}
+
+.budget-tip {
+  color: #6e756d;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
 .stat,
 .panel,
 .repair {
@@ -85,9 +156,133 @@ h1 {
 .layout {
   display: grid;
   gap: 18px;
-  grid-template-columns: 340px 1fr;
+  grid-template-columns: 360px 1fr;
   margin: 0 auto;
   max-width: 1240px;
+}
+
+.side {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+}
+
+.grid-two {
+  grid-template-columns: 1fr 110px;
+}
+
+.hint {
+  color: #828a80;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.flash {
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+}
+
+.flash.ok {
+  background: #dcebd9;
+  border: 1px solid #b6d0b0;
+  color: #376336;
+}
+
+.flash.error {
+  background: #f6ddd6;
+  border: 1px solid #e2b1a3;
+  color: #8f3827;
+}
+
+.workers {
+  display: grid;
+  gap: 10px;
+}
+
+.worker {
+  background: #f6f7f3;
+  border: 1px solid #dde1d9;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.worker-head {
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.worker-head span {
+  color: #6e756d;
+  font-size: 0.78rem;
+}
+
+.job {
+  align-items: center;
+  border-top: 1px dashed #d4d9cf;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  padding: 7px 0;
+}
+
+.job .slot {
+  color: #9a6a1f;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.job-title {
+  color: #596257;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.muted {
+  color: #8d958b;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.actual-input {
+  flex: 1 1 150px;
+  min-height: 38px;
+  width: auto;
+}
+
+.primary.small {
+  min-height: 38px;
+  padding: 8px 12px;
+}
+
+.ghost.danger {
+  background: #f3e3de;
+  color: #94402f;
+}
+
+.chip.actual {
+  background: #dcebd9;
+  color: #376336;
+}
+
+.chip.schedule {
+  background: #f3e7d2;
+  color: #8a5f1d;
+}
+
+.confirm-box {
+  background: #f6ddd6;
+  border-radius: 6px;
+  color: #8f3827;
+  font-size: 0.83rem;
+  line-height: 1.6;
+  padding: 9px 12px;
 }
 
 .panel {
@@ -258,6 +453,16 @@ textarea {
 .status.done {
   background: #d8ead6;
   color: #376336;
+}
+
+.status.confirm {
+  background: #f3dcc8;
+  color: #8a4d22;
+}
+
+.status.mini {
+  font-size: 0.68rem;
+  padding: 2px 7px;
 }
 
 .actions {
